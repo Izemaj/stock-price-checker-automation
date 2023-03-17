@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>README: Stock Price Checker</title>
 </head>
 <body>
 	<h1>Stock Price Checker</h1>
@@ -16,7 +15,7 @@
 		<li><code>main()</code>: This function calls all the other functions in the correct order to execute the program.</li>
 	</ul>
 	<h2>How it works</h2>
-	<p>When you run the program, it prompts you to enter the stock symbol for the company you want to check. Then, it uses the AlphaVantage API to fetch the closing prices of the stock for the last two days. It calculates the percentage difference between the prices and determines if it's a significant change. If the change is significant, it uses the News API to fetch news articles related to the company. Finally, it sends an SMS message using Twilio API to notify you of the change in stock prices and provide a summary of the news articles.</p>
+	<p>The automation script fetches the closing prices of a stock for the last two days using the AlphaVantage API after prompting for the stock symbol. It then calculates the percentage difference between the prices and checks if it's a significant change. If it is significant, the script fetches news articles related to the company using the News API. In the final step, it sends an SMS message through the Twilio API to inform you about the change in stock prices and provide a summary of the news articles.</p>
 	<h2>Requirements</h2>
 	<ul>
 		<li>Python 3.x</li>
@@ -30,12 +29,13 @@
 	<ol>
 		<li>Clone the repository to your local machine.</li>
 		<li>Install the required libraries using pip:</li>
-		<pre><code>pip install -r requirements.txt</code></pre>
-		<li>Get your News API key and AlphaVantage API key and update the <code>config.ini</code> file with your keys.</li>
-		<li>Sign up for a Twilio account and get a Twilio phone number. Update the <code>config.ini</code> file with your Twilio account SID, auth token, and phone number.</li>
+		<pre><code>pip install twilio</code></pre>
+		<pre><code>pip install requests</code></pre>
+		<li>Update the <code>config.ini</code> file with your News API key, AlphaVantage API key, Twilio account SID, auth token, and phone number.</li>
 		<li>Run the program:</li>
-		<pre><code>python stock_price_checker.py</code></pre>
+		<pre><code>python stock_price_automation.py</code></pre>
 	</ol>
+<p>Before running the program, make sure you have signed up for a Twilio account and obtained a Twilio phone number, as well as acquired your News API key and AlphaVantage API key. The program will automatically fetch the closing prices of a stock for the last two days using the AlphaVantage API, calculate the percentage difference between the prices, fetch news articles related to the company using the News API, and send SMS messages using the Twilio API based on the percentage difference in stock prices. </p>
 </body>
 </html>
 
