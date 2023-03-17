@@ -1,52 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>README: Stock Price Checker</title>
 </head>
 <body>
-	<h1>Stock Alert App</h1>
-	<p>This is a simple Python application that sends SMS alerts based on the percentage change in stock prices of a particular company.</p>
-  <h2>Features</h2>
-<ul>
-	<li>Fetches the closing prices of a stock for the last two days from AlphaVantage API.</li>
-	<li>Calculates the percentage difference between two prices and indicates if it was an increase or decrease.</li>
-	<li>Fetches news articles related to a query from GNews API.</li>
-	<li>Sends SMS messages using Twilio API based on the percentage difference in stock prices.</li>
-</ul>
-
-<h2>Installation</h2>
-<ol>
-	<li>Clone the repository: <code>git clone https://github.com/your-username/stock-alert-app.git</code></li>
-	<li>Install the required dependencies: <code>pip install -r requirements.txt</code></li>
-	<li>Set environment variables for sensitive information:
-		<ul>
-			<li><code>ALPHAVANTAGE_API_KEY</code>: AlphaVantage API key</li>
-			<li><code>GNEWS_API_KEY</code>: GNews API key</li>
-			<li><code>TWILIO_ACCOUNT_SID</code>: Twilio account SID</li>
-			<li><code>TWILIO_AUTH_TOKEN</code>: Twilio authentication token</li>
-			<li><code>TWILIO_PHONE_NUMBER</code>: Twilio phone number</li>
-		</ul>
-	</li>
-</ol>
-
-<h2>Usage</h2>
-<p>To run the application, execute the following command in the terminal:</p>
-<pre><code>python main.py</code></pre>
-
-<p>The application will fetch the closing prices of the specified stock for the last two days and calculate the percentage difference. If the percentage difference is greater than 5%, it will fetch news articles related to the company and send an SMS alert with the percentage difference and the news articles.</p>
-
-<h2>Contributing</h2>
-<p>Contributions are welcome! If you would like to contribute to this project, please follow these steps:</p>
-<ol>
-	<li>Fork the repository</li>
-	<li>Create a new branch: <code>git checkout -b new-feature</code></li>
-	<li>Make your changes and commit them: <code>git commit -m 'Add new feature'</code></li>
-	<li>Push to the branch: <code>git push origin new-feature</code></li>
-	<li>Create a pull request</li>
-</ol>
-
-<h2>Credits</h2>
-<p>This project was created by <a href="https://github.com/izemaj">Izemaj</a>.</p>
- </body>
+	<h1>Stock Price Checker</h1>
+	<p>This program fetches the closing prices of a stock for the last two days from AlphaVantage API, calculates the percentage difference between the prices, fetches news articles related to the company, and sends SMS messages using Twilio API based on the percentage difference in stock prices.</p>
+	<h2>Functions</h2>
+	<p>The program is divided into several functions:</p>
+	<ul>
+		<li><code>get_stock_prices()</code>: This function fetches the closing prices of a stock for the last two days from AlphaVantage API.</li>
+		<li><code>calculate_percentage_difference()</code>: This function calculates the percentage difference between the closing prices.</li>
+		<li><code>get_news_articles()</code>: This function fetches news articles related to the company using News API.</li>
+		<li><code>send_sms()</code>: This function sends an SMS message using Twilio API based on the percentage difference in stock prices.</li>
+		<li><code>main()</code>: This function calls all the other functions in the correct order to execute the program.</li>
+	</ul>
+	<h2>How it works</h2>
+	<p>When you run the program, it prompts you to enter the stock symbol for the company you want to check. Then, it uses the AlphaVantage API to fetch the closing prices of the stock for the last two days. It calculates the percentage difference between the prices and determines if it's a significant change. If the change is significant, it uses the News API to fetch news articles related to the company. Finally, it sends an SMS message using Twilio API to notify you of the change in stock prices and provide a summary of the news articles.</p>
+	<h2>Requirements</h2>
+	<ul>
+		<li>Python 3.x</li>
+		<li>Requests library</li>
+		<li>Twilio library</li>
+		<li>News API key</li>
+		<li>AlphaVantage API key</li>
+		<li>Twilio account and phone number</li>
+	</ul>
+	<h2>Usage</h2>
+	<ol>
+		<li>Clone the repository to your local machine.</li>
+		<li>Install the required libraries using pip:</li>
+		<pre><code>pip install -r requirements.txt</code></pre>
+		<li>Get your News API key and AlphaVantage API key and update the <code>config.ini</code> file with your keys.</li>
+		<li>Sign up for a Twilio account and get a Twilio phone number. Update the <code>config.ini</code> file with your Twilio account SID, auth token, and phone number.</li>
+		<li>Run the program:</li>
+		<pre><code>python stock_price_checker.py</code></pre>
+	</ol>
+</body>
 </html>
+
 
 
