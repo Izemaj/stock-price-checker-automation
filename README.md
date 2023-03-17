@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Stock Alert App</title>
 </head>
 <body>
 	<h1>Stock Alert App</h1>
