@@ -33,7 +33,7 @@
 		<pre><code>pip install requests</code></pre>
 		<li>Update the enviroment variables with your News API key, AlphaVantage API key, Twilio account SID, auth token, and phone number.</li>
 		<li>Run the program:</li>
-		<pre><code>python stock_price_automation.py</code></pre>
+		<pre><code>python main.py</code></pre>
 	</ol>
 <p>Before running the program, make sure you have signed up for a Twilio account and obtained a Twilio phone number, as well as acquired your News API key and AlphaVantage API key. The program will automatically fetch the closing prices of a stock for the last two days using the AlphaVantage API, calculate the percentage difference between the prices, fetch news articles related to the company using the News API, and send SMS messages using the Twilio API based on the percentage difference in stock prices. </p>
 </body>
