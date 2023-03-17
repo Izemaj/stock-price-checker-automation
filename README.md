@@ -10,8 +10,8 @@
 	<ul>
 		<li><code>get_stock_prices()</code>: This function fetches the closing prices of a stock for the last two days from AlphaVantage API.</li>
 		<li><code>calculate_percentage_difference()</code>: This function calculates the percentage difference between the closing prices.</li>
-		<li><code>get_news_articles()</code>: This function fetches news articles related to the company using News API.</li>
-		<li><code>send_sms()</code>: This function sends an SMS message using Twilio API based on the percentage difference in stock prices.</li>
+		<li><code>get_news()</code>: This function fetches news articles related to the company using News API.</li>
+		<li><code>send_messages()</code>: This function sends an SMS message using Twilio API based on the percentage difference in stock prices.</li>
 		<li><code>main()</code>: This function calls all the other functions in the correct order to execute the program.</li>
 	</ul>
 	<h2>How it works</h2>
