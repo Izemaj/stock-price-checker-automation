@@ -31,7 +31,7 @@
 		<li>Install the required libraries using pip:</li>
 		<pre><code>pip install twilio</code></pre>
 		<pre><code>pip install requests</code></pre>
-		<li>Update the <code>config.ini</code> file with your News API key, AlphaVantage API key, Twilio account SID, auth token, and phone number.</li>
+		<li>Update the enviroment variables with your News API key, AlphaVantage API key, Twilio account SID, auth token, and phone number.</li>
 		<li>Run the program:</li>
 		<pre><code>python stock_price_automation.py</code></pre>
 	</ol>
